@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>LOGIN</title>
+</head>
+<body>
+	<div class="kotak">
+		<form action="../back-end/proses.php" method="post">
+			<input type="text" name="username" class="inputtext" placeholder="Username">
+			<input type="password" name="password" class="inputtext" placeholder="Password">
+			
+			<input type="submit" name="submit" value="Login" class="btnlgn">
+		</form>
+		<button id="klikmodal1" class="link">Buat Akun Baru</button>
+	</div>
+	<div class="modal1" id="modalhello1">
+		<div class="modal-content1">
+			<span class="close1">&times;</span>
+			<form action="../back-end/proses.php" method="post">
+				<input type="text" name="username" class="reginput" placeholder="Username">
+				<input type="password" name="password" class="reginput" placeholder="Password">
+				<input type="password" name="repas" class="reginput" placeholder="Ulang Password">
+				<input type="submit" value="register" name="register" class="btnreg">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		var modal1 = document.getElementById("modalhello1");
+		var button1 = document.getElementById("klikmodal1");
+		var close1 = document.getElementsByClassName("close1")[0];
+		var reg = document.getElementsByClassName("btnreg");
+
+		button1.onclick = function(){
+		    modal1.style.display = "block";
+		}
+		close1.onclick = function(){
+		    modal1.style.display = "none";
+		}
+		reg.onclick = function(){
+		    modal1.style.display = "none";
+		}
+		window.onclick = function(event){
+		    if (event.target == modal) {
+		        modal1.style.display = "none";
+		    }
+		}	
+	</script>
+</body>
+</html>

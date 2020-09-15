@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>HOME</title>
+</head>
+<body>
+	<button id="klikmodal" class="hello">HELLO</button>
+	<div class="modal" id="modalhello">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p id="text"></p>
+		</div>
+	</div><br><br>
+	<center><div id="jamdigital" class="jam" onload="jrt()"></div></center>
+	<div style="float: right;">
+		<a href="#" class="hello">Log Out</a>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+		var auto = setInterval(
+			function(){
+				$('#text').load('../back-end/session.php');
+			}, 100);
+	</script>
+</body>
+</html>
